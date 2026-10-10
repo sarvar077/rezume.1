@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rezyume yaratuvchi</title>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Rezyume yaratuvchi</h1>
+  <div style="display:flex;gap:8px">
+    <button class="ghost" id="reset">Tozalash</button>
+    <button class="btn" id="pdf">PDF yuklab olish</button>
+  </div>
+</header>
+<main>
+  <section class="editor" aria-label="Ma'lumotlar">
+    <fieldset>
+      <legend>Shaxsiy ma'lumotlar</legend>
+      <label for="name">Ism va familiya</label><input id="name" data-k="name" autocomplete="name">
+      <label for="title">Lavozim</label><input id="title" data-k="title" placeholder="Masalan: Frontend dasturchi">
+      <div class="row">
+        <div><label for="email">Email</label><input id="email" data-k="email" type="email"></div>
+        <div><label for="phone">Telefon</label><input id="phone" data-k="phone" type="tel"></div>
+      </div>
+      <label for="city">Shahar</label><input id="city" data-k="city">
+      <label for="summary">Qisqacha o'zingiz haqingizda</label><textarea id="summary" data-k="summary"></textarea>
+    </fieldset>
+    <fieldset>
+      <legend>Ish tajribasi</legend>
+      <div id="exp"></div>
+      <button class="ghost" id="addExp" style="margin-top:12px">+ Tajriba qo'shish</button>
+    </fieldset>
+    <fieldset>
+      <legend>Ta'lim</legend>
+      <div id="edu"></div>
+      <button class="ghost" id="addEdu" style="margin-top:12px">+ Ta'lim qo'shish</button>
+    </fieldset>
+    <fieldset>
+      <legend>Ko'nikmalar</legend>
+      <label for="skills">Vergul bilan ajrating</label>
+      <input id="skills" data-k="skills" placeholder="JavaScript, Excel, Ingliz tili">
+    </fieldset>
+  </section>
+  <section class="preview-wrap" aria-label="Ko'rinish"><div class="paper" id="paper"></div></section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
